@@ -1,0 +1,27 @@
+name: Test Workflow
+on: push
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Lint the project
+          run: |
+            echo "Linting the project..."
+            eslint --ext .jsx --fix src
+        - name: Build the code
+          run: |
+            echo "Building the code..."
+            vite build
+        - name: Run tests
+          run: |
+            echo "Running tests..."
+            vitest run
+        - name: Deploy to production
+          run: |
+            echo "Deploying to production..."
+            echo "Deployment complete!"
+
+      
+
+
+
