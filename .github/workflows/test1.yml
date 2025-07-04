@@ -4,6 +4,8 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
+        - name: Install dependencies
+          run: npm ci
         - name: Lint the project
           run: |
             echo "Linting the project..."
