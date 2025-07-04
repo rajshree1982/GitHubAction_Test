@@ -5,9 +5,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Install dependencies
-          run: 
+          run: |
             npm install
             npm ci
+        - name: Install ESLint
+          run: |
+            npm install -g eslint
         - name: Lint the project
           run: |
             echo "Linting the project..."
