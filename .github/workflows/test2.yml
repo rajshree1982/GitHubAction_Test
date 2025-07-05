@@ -2,8 +2,7 @@ name: Deploy workflow
 on:
   issues:
     types: [opened]
-permissions:
-  issues: read
+  workflow_dispatch:   
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -17,5 +16,5 @@ jobs:
       - name: Get issues event title
         run: |
           echo "Issue title: ${{ github.event.issue.title }}"
-          
+
         
