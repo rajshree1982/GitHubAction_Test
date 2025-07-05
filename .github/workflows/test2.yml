@@ -1,0 +1,17 @@
+name: Deploy workflow
+on:
+  issues:
+    types: [opened]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '16.x'
+      - name: Get issues event title
+        run: echo "Issue title: ${{ github.event.issue.title }}"
+        
