@@ -12,22 +12,18 @@ jobs:
           run: |
             npm install
             npm ci
-        - name: Install ESLint
-          run: |
-            npm install eslint@8.57.0 --save-dev
-            npx eslint .
         - name: Lint the project
           run: |
             echo "Linting the project..."
-            eslint --ext .jsx --fix src
+            npm lint
         - name: Build the code
           run: |
             echo "Building the code..."
-            vite build
+            npm build
         - name: Run tests
           run: |
             echo "Running tests..."
-            vitest run
+            npm test
         - name: Deploy to production
           run: |
             echo "Deploying to production..."
