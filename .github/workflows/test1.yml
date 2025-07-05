@@ -15,15 +15,15 @@ jobs:
         - name: Lint the project
           run: |
             echo "Linting the project..."
-            npm lint
+            npm run lint
         - name: Build the code
           run: |
             echo "Building the code..."
-            npm build
+            npm run build
         - name: Run tests
           run: |
             echo "Running tests..."
-            npm test
+            npm run test
         - name: Deploy to production
           run: |
             echo "Deploying to production..."
