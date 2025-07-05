@@ -15,6 +15,7 @@ jobs:
         - name: Install ESLint
           run: |
             npm install eslint@8.57.0 --save-dev
+            npx eslint .
         - name: Lint the project
           run: |
             echo "Linting the project..."
