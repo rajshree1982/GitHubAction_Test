@@ -17,4 +17,5 @@ jobs:
       - name: Get issues event title
         run: |
           echo "Issue title: ${{ github.event.issue.title }}"
+          
         
