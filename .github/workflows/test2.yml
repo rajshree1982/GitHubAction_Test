@@ -13,5 +13,6 @@ jobs:
         with:
           node-version: '16.x'
       - name: Get issues event title
-        run: echo "Issue title: ${{ github.event.issue.title }}"
+        run: |
+          echo "Issue title: ${{ github.event.issue.title }}"
         
